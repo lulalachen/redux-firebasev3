@@ -7,11 +7,8 @@ import {
     LOGIN_ERROR,
     NO_VALUE
 } from './constants'
-
 import { Promise } from 'es6-promise'
-
 const getWatchPath = (event, path) => event + ':' + ((path.substring(0, 1) === '/') ? '' : '/') + path
-
 const setWatcher = (firebase, event, path, queryId = undefined) => {
   const id = (queryId) ? event + ':/' + queryId : getWatchPath(event, path)
 
